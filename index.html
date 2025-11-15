@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Televerse Shop - Mini E-Commerce Portal</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">TS</div>
+        <div>
+          <div style="font-weight:800">Televerse Shop</div>
+          <div style="font-size:12px;color:#334e68">A demo e-commerce portal</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#home" data-nav>Home</a></li>
+          <li><a href="#products" data-nav>Product items</a></li>
+          <li><a href="#contact" data-nav>Contact Us</a></li>
+          <li><a href="#about" data-nav>About Us</a></li>
+          <li><a href="#" id="open-login">Login / Register</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section id="home" class="hero">
+          <div class="hero-left">
+            <h1>Welcome to Televerse Shop</h1>
+            <p>
+              Explore products, add to wishlist, place orders and post reviews.
+              This demo uses localStorage to save your data in the browser.
+            </p>
+
+            <div class="search">
+              <input id="searchInput" placeholder="Search products (try 'phone' or 'headphone')" />
+              <button id="searchBtn">Search</button>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=800&auto=format&fit=crop"
+              alt="hero" style="width:220px;border-radius:12px;object-fit:cover" />
+          </div>
+        </section>
+
+        <section id="products" class="products"></section>
+
+        <section id="about" class="section-box">
+          <h3>About Televerse Shop</h3>
+          <p>This is a static demo made with HTML/CSS/JS.</p>
+        </section>
+
+        <section id="contact" class="section-box">
+          <h3>Contact Us</h3>
+          <p>Customer Care: +91 98765 43210 — support@televerseshop.example</p>
+        </section>
+      </main>
+
+      <aside>
+        <div class="panel">
+          <h4>Your Account</h4>
+          <div id="accountInfo">
+            Not logged in — <a href="#" id="open-register">Register</a> or
+            <a href="#" id="open-login2">Login</a>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h4>Wishlist</h4>
+          <div id="wishlistList" class="list"></div>
+        </div>
+
+        <div class="panel">
+          <h4>Orders</h4>
+          <div id="ordersList" class="list"></div>
+        </div>
+
+        <div class="panel">
+          <h4>Customer Care & Reporting</h4>
+          <button class="btn btn-primary" id="open-contact-form">Contact Support</button>
+          <button class="btn btn-ghost" id="open-report-form">Report an issue</button>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <small>Made with ❤️ for demo purposes.</small>
+    </footer>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <div id="modalBody"></div>
+      <div style="text-align:right;margin-top:10px">
+        <button id="closeModal" class="btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+</html>
